@@ -12,3 +12,5 @@ change made from local branch
 Version3
 # This is 2nd change made in remote readme branch
 Version4 
+# This change will contradict
+Version5

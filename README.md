@@ -11,6 +11,6 @@ change made from local branch
 # This change is made in remote readme branch
 Version3
 # This is 2nd change made in remote readme branch
-Version4 
+Version4
 # This change will contradict
-Version5
+Finally this is will no longer contradict

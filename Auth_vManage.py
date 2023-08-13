@@ -1,4 +1,5 @@
 import requests
+import urllib3
 def authenticate_vmanage():
     cred_list=[]
     cookie_url = "https://10.10.20.90/j_security_check"
@@ -8,6 +9,7 @@ def authenticate_vmanage():
     headers_for_cookie = {
         'Content-Type': 'application/x-www-form-urlencoded'
         }
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
     cookie_response=requests.post(cookie_url,headers=headers_for_cookie,data=payload_for_cookie,verify=False)
     cookie=((cookie_response.headers['set-cookie']).split(';'))[0]
     headers_for_token ={
